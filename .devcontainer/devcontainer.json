@@ -1,0 +1,34 @@
+{
+  "name": "retro2026 (Tymonteam.pl)",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [
+    3000,
+    8000,
+    5432
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "web (Next.js)"
+    },
+    "8000": {
+      "label": "api (FastAPI)"
+    },
+    "5432": {
+      "label": "db (Postgres)"
+    }
+  },
+  "postCreateCommand": "bash -lc 'echo \"Codespace ready\"'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
